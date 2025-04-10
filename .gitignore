@@ -5,7 +5,7 @@ __pycache__/
 
 # My environment files
 myenv/
-app.env
+api.env
 
 # PyPI configuration file
 .pypirc
