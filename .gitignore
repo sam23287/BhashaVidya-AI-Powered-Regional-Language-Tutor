@@ -3,6 +3,13 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# My environment files
+myenv/
+app.env
+
+# PyPI configuration file
+.pypirc
+
 # C extensions
 *.so
 
