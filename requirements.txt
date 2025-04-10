@@ -1,0 +1,12 @@
+streamlit
+googletrans
+gTTS
+openai
+httpx
+httpcore
+deep_translator
+SpeechRecognition 
+pydub
+streamlit_webrtc
+pdfplumber
+dotenv
