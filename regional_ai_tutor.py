@@ -4,7 +4,7 @@ import tempfile
 import speech_recognition as sr
 from deep_translator import GoogleTranslator
 from gtts import gTTS
-from openai import OpenAI
+from openai import OpenAI, OpenAIError
 from pydub import AudioSegment
 from dotenv import load_dotenv
 import logging
@@ -17,7 +17,10 @@ load_dotenv('api.env')
 groq_api_key = os.getenv("GROQ_API_KEY")
 
 # Initialize OpenAI client for Groq endpoint
-client = OpenAI(base_url="https://api.groq.com/openai/v1", api_key=groq_api_key)
+try:
+    client = OpenAI(base_url="https://api.groq.com/openai/v1", api_key=groq_api_key)
+except OpenAIError as e:
+    print(f"An error occurred while initializing the OpenAI client: {str(e)}")
 
 # ✅ Subjects and topics
 subjects = {
