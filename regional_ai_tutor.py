@@ -16,6 +16,8 @@ load_dotenv('api.env')
 # Get the Groq API key from the environment variable
 groq_api_key = os.getenv("GROQ_API_KEY")
 
+client = None  # define globally
+
 # Initialize OpenAI client for Groq endpoint
 try:
     client = OpenAI(base_url="https://api.groq.com/openai/v1", api_key=groq_api_key)
